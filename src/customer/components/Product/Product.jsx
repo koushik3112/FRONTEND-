@@ -198,7 +198,7 @@ export default function product() {
                       <DisclosureButton className="group flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
                         <span className="font-medium text-gray-900">{section.name}</span>
                         <span className="ml-6 flex items-center">
-                         <PlusIcon aria-hidden="true" className="size-5 group-data-open:hidden" />
+                          <PlusIcon aria-hidden="true" className="size-5 group-data-open:hidden" />
                           <MinusIcon aria-hidden="true" className="size-5 group-not-data-open:hidden" />
                         </span>
                       </DisclosureButton>
@@ -252,11 +252,11 @@ export default function product() {
 
               {/* Product grid */}
               <div className="lg:col-span-4">{/* Your content */}</div>
-                <div className='flex flex-wrap justify-center bg-white py-5'>
+              <div className='flex flex-wrap justify-center bg-white py-5'>
 
-                    {mens_kurta.map(item) => <ProductCard product={item} />}
+                {mens_kurta.map(item) => <ProductCard product={item} />}
 
-                </div>
+              </div>
             </div>
           </section>
         </main>

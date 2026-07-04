@@ -16,6 +16,7 @@ function classNames(...classes) {
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
+  const navigate=useNavigate();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { auth, cart } = useSelector((store) => store);
@@ -39,10 +40,12 @@ export default function Navigation() {
     setOpenAuthModal(false);
   };
 
+  
   const handleCategoryClick = (category, section, item, close) => {
     navigate(`/${category.id}/${section.id}/${item.id}`);
     close();
   };
+
 
   useEffect(() => {
     if (auth.user) {
@@ -429,12 +432,10 @@ export default function Navigation() {
                           "aria-labelledby": "basic-button",
                         }}
                       >
-                        <MenuItem onClick={handleMyOrderClick}>
-                          R
-                            ? "Admin Dashboard"
-                            : "My Orders"}
+                        <MenuItem onClick={()=>navigate("/account/order")}>
+                        My Orders
                         </MenuItem>
-                        <MenuItem onClick={handleLogout}>Logout</MenuItem>
+                        <MenuItem>Logout</MenuItem>
                       </Menu>
                     </div>
                   ) : (

@@ -3,8 +3,9 @@ import "./Productcard.css"
 
 
 const ProductCard = ({ product }) => {
+    const navigate=iseNavigate();
     return (
-        <div className="productCard w-[15rem] m-3 transatio-all cursor-pointer">
+        <div onclick={()=> navigate(`/product/${5}`)} className="productCard w-[15rem] m-3 transatio-all cursor-pointer">
             <div className=" h-[20rem]">
                 <img className="h-full w-full object-cover object-left-top" src=" /* IMAGE OF PRODUCT ON CARD*/ " alt="{product.imageUrl} " />
                 <div />
